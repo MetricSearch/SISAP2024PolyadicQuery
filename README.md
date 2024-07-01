@@ -1,5 +1,5 @@
 # Wikipedia Glove Experiments
-This reporitory contains the experiments detailed in "Scalable Polyadic Queries" for SISAP2024.
+This repository contains the experiments detailed in "Scalable Polyadic Queries" for SISAP2024.
 
 ## Running Experiments
 ### Generating Near Neighbour Graphs
