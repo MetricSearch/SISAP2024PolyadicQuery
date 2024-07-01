@@ -159,7 +159,8 @@ public class RunSedExperiments {
             long approxTime = approxEndTimeMs - approxStartTimeMs;
 
             int queryPos = -1;
-
+	    
+	    System.out.println(result);
             for (int wordidx = 0; wordidx < 100; wordidx++) {
                 if (result.get(wordidx).X() == qid) {
                     queryPos = wordidx;
@@ -324,6 +325,7 @@ public class RunSedExperiments {
                 results.put(word, positions);
             } catch (RuntimeException e) {
                 System.err.println(e);
+		e.printStackTrace();
             }
         }
 
