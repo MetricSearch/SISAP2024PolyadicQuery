@@ -38,3 +38,6 @@ build/
 .DS_Store
 /src/main/java/uk/ac/standrews/cs/descent/data/*
 /src/main/java/uk/ac/standrews/cs/descent/data/
+data/wiki_glove_sed_nns_sm_t100_dists.txt
+data/wiki_glove_sed_nns_sm_t100_indices.txt
+data/wiki_glove_sm_t100.txt

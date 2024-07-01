@@ -5,6 +5,7 @@ import numba
 
 t=10
 
+# Change path if rerunning!
 data = loadmat(f'/data/wikipedia_glove/wiki_glove_100d.mat')['glove']
 
 # L2 normalise
