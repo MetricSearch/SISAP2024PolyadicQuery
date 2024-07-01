@@ -29,8 +29,8 @@ public class MainSearchMSED {
 
         MsedRep query = new MsedRep(reps);
 
-        String restore_indices_path = "/Volumes/Data/wiki_glove_sed_nn_table_dong/wiki_glove_sed_nns_sm_t10_indices.txt";
-        String restore_dists_path = "/Volumes/Data/wiki_glove_sed_nn_table_dong/wiki_glove_sed_nns_sm_t10_dists.txt";
+        String restore_indices_path = "/Volumes/Data/wiki_glove_sed_nn_table_dong/wiki_glove_sed_nns_sm_t100_indices.txt";
+        String restore_dists_path = "/Volumes/Data/wiki_glove_sed_nn_table_dong/wiki_glove_sed_nns_sm_t100_dists.txt";
 
         System.out.println("Restoring Descent structure nns = " + num_nns + " from " + restore_indices_path + " and " + restore_dists_path);
 

@@ -160,7 +160,7 @@ public class RunSedExperiments {
 
             int queryPos = -1;
 	    
-	    System.out.println(result);
+	        System.out.println(result);
             for (int wordidx = 0; wordidx < 100; wordidx++) {
                 if (result.get(wordidx).X() == qid) {
                     queryPos = wordidx;
@@ -293,8 +293,8 @@ public class RunSedExperiments {
         JSONObject results = new JSONObject();
         HashMap<String, List<String>> wordSyns = readDataFile();
 
-        String restore_indices_path = "data/wiki_glove_sed_nns_sm_t10_indices.txt";
-        String restore_dists_path = "data/wiki_glove_sed_nns_sm_t10_dists.txt";
+        String restore_indices_path = "data/wiki_glove_sed_nns_sm_t100_indices.txt";
+        String restore_dists_path = "data/wiki_glove_sed_nns_sm_t100_dists.txt";
 
         WikipediaGloveDataAccessObject context = new WikipediaGloveDataAccessObject();
 

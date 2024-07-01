@@ -17,7 +17,7 @@ public class WikipediaGloveDataAccessObject implements DataAccessObject<MsedRep>
     private List<String> labels;
     private final String wikipedia_glove_dir_root = "data/";
     private final String wikipedia_glove_header_file = wikipedia_glove_dir_root + "rowheaders.txt";
-    private final String wikipedia_glove_file = wikipedia_glove_dir_root + "wiki_glove_sm_t10.txt";
+    private final String wikipedia_glove_file = wikipedia_glove_dir_root + "wiki_glove_sm_t100.txt";
     private final int dims = 100; // always 100 says Ben
     private final int num_entries = 400_000; // num wikipedia glove entries
     public WikipediaGloveDataAccessObject() throws IOException {
