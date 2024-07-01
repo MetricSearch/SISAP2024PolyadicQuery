@@ -3,12 +3,13 @@ from scipy.io import loadmat, savemat
 from pynndescent import NNDescent
 import numba
 
-t=100
+t=10
 
 data = loadmat(f'/data/wikipedia_glove/wiki_glove_100d.mat')['glove']
 
 # L2 normalise
 data = data / np.linalg.norm(data, axis=1, keepdims=True)
+
 
 print(data.shape)
 
@@ -16,6 +17,7 @@ print(data.shape)
 sm_data = np.exp(data / t)/np.sum( np.exp(data / t), axis=1, keepdims=True )
 
 savemat('sm_glove.mat', {'features': sm_data})
+np.savetxt(f"wiki_glove_sm_t{t}.txt", sm_data, delimiter=' ', fmt='%.16f')
 
 @numba.jit
 def SED(x, y):
@@ -31,6 +33,6 @@ def C(x):
 
 sed_nns = NNDescent(sm_data, metric=SED, n_neighbors=101)
 
-savemat(f'wiki_glove_sed_nns_sm_t{t}.mat', {'indexes': sed_nns.neighbor_graph[0], 'distances': sed_nns.neighbor_graph[1]})
-np.savetxt(f"wiki_glove_sed_nns_sm_t{t}_dists.txt", sed_nns.neighbor_graph[1], delimiter=' ', fmt='%1.3f')
-np.savetxt(f"wiki_glove_sed_nns_sm_t{t}_indices.txt", sed_nns.neighbor_graph[0], delimiter=' ', fmt='%1.3f')
+savemat(f'wiki_glove_sm_t{t}.mat', {'indexes': sed_nns.neighbor_graph[0], 'distances': sed_nns.neighbor_graph[1]})
+np.savetxt(f"wiki_glove_sed_nns_sm_t{t}_dists.txt", sed_nns.neighbor_graph[1][:, 1:], delimiter=' ', fmt='%.16f')
+np.savetxt(f"wiki_glove_sed_nns_sm_t{t}_indices.txt", sed_nns.neighbor_graph[0][:, 1:], delimiter=' ', fmt='%d')
