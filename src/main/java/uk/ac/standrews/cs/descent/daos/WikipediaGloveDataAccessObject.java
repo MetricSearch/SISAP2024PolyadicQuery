@@ -35,16 +35,6 @@ public class WikipediaGloveDataAccessObject implements DataAccessObject<MsedRep>
         return new MsedRep( data.get(index) );
     }
 
-    @Override
-    public List<MsedRep> getAllData() {
-        List<MsedRep> msedRepData = new ArrayList<>();
-
-        for (int i = 0; i < getDataSize(); i++) {
-            msedRepData.add(new MsedRep(data.get(i)));
-        }
-        return msedRepData;
-    }
-
     public List<double[]> getData() {
         return data;
     }

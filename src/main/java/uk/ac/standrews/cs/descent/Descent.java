@@ -250,7 +250,6 @@ public class Descent<metric_type> {
     }
 
     public ConcurrentOrderedList<Integer, Double> exactKnnSearch(metric_type query, int swarm_size, int nn_to_return) {
-        List<metric_type> data = dao.getAllData();
         ConcurrentOrderedList<Integer, Double> results = new ConcurrentOrderedList<>(nn_to_return);
 
         for (int i = 0; i < dao.getDataSize(); i++) {

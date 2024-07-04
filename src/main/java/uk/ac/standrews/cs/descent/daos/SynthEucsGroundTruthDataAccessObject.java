@@ -13,7 +13,6 @@ import java.util.List;
 public class SynthEucsGroundTruthDataAccessObject implements DataAccessObject<CartesianPoint> {
     private static final String COMMA_DELIMITER = ",";
     private static final String SPACE_DELIMITER = " ";
-
     private List<CartesianPoint> data;
     private List<List<Integer>> data_nn_indices;
     private List<CartesianPoint> queries;
@@ -70,11 +69,6 @@ public class SynthEucsGroundTruthDataAccessObject implements DataAccessObject<Ca
     @Override
     public CartesianPoint getData(int index) {
         return data.get(index);
-    }
-
-    @Override
-    public List<CartesianPoint> getAllData() {
-        return data;
     }
 
     public void showData(String s, CartesianPoint p) {

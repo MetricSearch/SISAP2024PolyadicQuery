@@ -1,4 +1,4 @@
-package uk.ac.standrews.cs.descent.sed;
+package uk.ac.standrews.cs.descent.glove;
 
 import uk.ac.standrews.cs.descent.daos.WikipediaGloveDataAccessObject;
 import uk.ac.standrews.cs.descent.msed.MsedRep;

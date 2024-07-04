@@ -70,11 +70,6 @@ public class BareEucGroundTruthDataAccessObject implements DataAccessObject<doub
         return data.get(index);
     }
 
-    @Override
-    public List<double[]> getAllData() {
-        return data;
-    }
-
     public List<double[]> getData() {
         return data;
     }

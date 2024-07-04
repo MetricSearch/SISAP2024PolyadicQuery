@@ -52,11 +52,6 @@ public class EucDinoDataAccessObject implements DataAccessObject<double[]> {
         return data.get(index);
     }
 
-    @Override
-    public List<double[]> getAllData() {
-        return data;
-    }
-
     public List<double[]> getData() {
         return data;
     }
